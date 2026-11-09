@@ -1,0 +1,215 @@
+/* VideoInsert 后台样式：所有选择器带 .vi- 前缀，不覆盖 Typecho 原有的 .wmd-button 规则 */
+
+#vi-admin-style ~ * {
+    box-sizing: border-box;
+}
+
+/* 工具栏按钮 */
+li.vi-tool {
+    list-style: none !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 2px 2px 0 !important;
+    padding: 0 !important;
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent !important;
+    opacity: 0.75;
+    transition: background-color .15s, opacity .15s;
+    vertical-align: middle;
+}
+
+li.vi-tool:hover,
+li.vi-tool:focus {
+    opacity: 1;
+    background: rgba(0, 0, 0, .06) !important;
+    outline: none;
+}
+
+.vi-tool__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Markdown 不可用时的兜底按钮 */
+.vi-bar {
+    margin: 0 0 8px;
+}
+
+/* 遮罩 */
+.vi-mask {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(20, 22, 26, .55);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: #1f2328;
+}
+
+body.vi-lock {
+    overflow: hidden;
+}
+
+/* 弹窗 */
+.vi-dialog {
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
+    overflow: hidden;
+}
+
+.vi-dialog__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eceef1;
+    font-size: 15px;
+}
+
+.vi-dialog__x {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    color: #8a9099;
+    padding: 0 4px;
+}
+
+.vi-dialog__x:hover {
+    color: #1f2328;
+}
+
+.vi-dialog__body {
+    padding: 18px 20px 8px;
+    overflow-y: auto;
+}
+
+.vi-dialog__foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 14px 20px;
+    border-top: 1px solid #eceef1;
+    background: #fafbfc;
+}
+
+.vi-field {
+    margin-bottom: 14px;
+}
+
+.vi-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #4a5058;
+}
+
+.vi-field label em {
+    color: #d4380d;
+    font-style: normal;
+}
+
+.vi-field input[type="text"],
+.vi-field select {
+    width: 100%;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #d6dae0;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 13px;
+    color: #1f2328;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+}
+
+.vi-field input[type="text"]:focus,
+.vi-field select:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, .12);
+}
+
+.vi-field input:disabled,
+.vi-field select:disabled {
+    background: #f5f6f8;
+    color: #a0a6ae;
+    cursor: not-allowed;
+}
+
+.vi-row {
+    display: flex;
+    gap: 14px;
+}
+
+.vi-row .vi-field {
+    flex: 1;
+    min-width: 0;
+}
+
+.vi-checks {
+    display: flex;
+    gap: 18px;
+    margin: 4px 0 10px;
+}
+
+.vi-checks label {
+    font-size: 13px;
+    color: #4a5058;
+    cursor: pointer;
+}
+
+.vi-hint,
+.vi-tip,
+.vi-error {
+    margin: 6px 0 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #8a9099;
+}
+
+.vi-hint--ok {
+    color: #1a7f4b;
+}
+
+.vi-tip {
+    margin: 0 0 8px;
+    color: #98a0aa;
+}
+
+.vi-error {
+    margin: 0 0 10px;
+    color: #cf2e2e;
+    min-height: 18px;
+}
+
+/* 移动端 */
+@media (max-width: 560px) {
+    .vi-dialog {
+        max-width: none;
+        max-height: 92vh;
+        border-radius: 10px;
+    }
+
+    .vi-row {
+        display: block;
+    }
+
+    .vi-checks {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+}

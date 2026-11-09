@@ -1,0 +1,397 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>VideoInsert 样式预览</title><style>.vi-video{display:block;max-width:100%;margin:1.6em auto;line-height:0}.vi-video__box{position:relative;display:block;max-width:100%;overflow:hidden}.vi-video video{display:block;width:auto;height:auto;max-width:100%;max-height:80vh;margin:0 auto;background:#000;border:0;outline:none;object-fit:contain}.vi-video__cap{display:block;margin:.7em 0 0;font-size:.8em;line-height:1.7;text-align:center;color:#8b929c;letter-spacing:.02em}.vi-video--embed .vi-video__box{width:100%;height:0;padding-top:56.25%}.vi-video--embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}@media(max-width:640px){.vi-video{margin:1.1em auto}.vi-video video{max-height:72vh}.vi-video__cap{font-size:.75em}}.vi-video{--vi-accent:#e9ecef;--vi-accent-soft:rgba(255,255,255,.20);--vi-track:rgba(255,255,255,.26);--vi-fg:#fff}.vi-video--color-indigo{--vi-accent:#7d9bff;--vi-accent-soft:rgba(125,155,255,.24)}.vi-video--color-teal{--vi-accent:#2fd4a7;--vi-accent-soft:rgba(47,212,167,.24)}.vi-video--color-amber{--vi-accent:#f5b544;--vi-accent-soft:rgba(245,181,68,.24)}.vi-video--color-rose{--vi-accent:#ff6b8a;--vi-accent-soft:rgba(255,107,138,.24)}.vi-video--color-violet{--vi-accent:#a78bfa;--vi-accent-soft:rgba(167,139,250,.24)}.vi-video video{cursor:pointer}.vi-player{position:absolute;left:0;right:0;top:0;bottom:0;z-index:3;opacity:0;pointer-events:none;transition:opacity .22s ease;color:var(--vi-fg);font:12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}.vi-player.is-visible{opacity:1}.vi-player__bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:24px 12px 10px;pointer-events:none;background:linear-gradient(to top,rgba(6,8,12,.92),rgba(6,8,12,.5) 62%,rgba(6,8,12,0))}.vi-player__big{position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px 0 0 -27px;display:flex;align-items:center;justify-content:center;border:0;border-radius:50%;cursor:pointer;background:var(--vi-accent);color:#0b0d12;box-shadow:0 8px 26px -8px rgba(0,0,0,.65);opacity:0;transition:transform .18s ease,opacity .2s ease}.vi-player.is-visible .vi-player__bar,.vi-player.is-visible .vi-player__big{pointer-events:auto}.vi-player.is-paused .vi-player__big{opacity:1}.vi-player__big:hover{transform:scale(1.06)}.vi-player__big svg{width:21px;height:21px;fill:currentColor;margin-left:2px}.vi-player__btn{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border:0;background:none;padding:0;color:inherit;cursor:pointer;opacity:.85;border-radius:6px;transition:opacity .15s,background .15s}.vi-player__btn:hover{opacity:1;background:rgba(255,255,255,.12)}.vi-player__btn svg{width:18px;height:18px;fill:currentColor}.vi-player__time{display:flex;gap:4px;align-items:baseline;min-width:74px;white-space:nowrap;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.72)}.vi-player__time b{font-weight:400;color:#fff}.vi-player__time i{font-style:normal;opacity:.4}.vi-player__progress{position:relative;flex:1 1 auto;min-width:44px;height:16px;display:flex;align-items:center;cursor:pointer;touch-action:none;outline:none}.vi-player__progress:before{content:"";position:absolute;left:0;right:0;height:4px;border-radius:2px;background:var(--vi-track)}.vi-player__buffer,.vi-player__fill{position:absolute;left:0;height:4px;border-radius:2px;width:0}.vi-player__buffer{background:rgba(255,255,255,.3)}.vi-player__fill{background:var(--vi-accent)}.vi-player__thumb{position:absolute;top:50%;left:0;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border-radius:50%;background:var(--vi-accent);box-shadow:0 0 0 4px var(--vi-accent-soft);opacity:0;transition:opacity .15s}.vi-player__progress:hover .vi-player__thumb,.vi-player__progress.is-drag .vi-player__thumb{opacity:1}.vi-player__vol{position:relative;width:62px;height:16px;display:none;align-items:center;cursor:pointer}@media(hover:hover) and (pointer:fine){.vi-player__vol{display:flex}}.vi-player__voltrack,.vi-player__volfill{position:absolute;left:0;height:4px;border-radius:2px}.vi-player__voltrack{width:100%;background:var(--vi-track)}.vi-player__volfill{width:100%;background:var(--vi-accent)}.vi-player__wrap{position:relative;display:flex}.vi-player__rate{width:auto;min-width:38px;padding:0 4px;font-size:11px;font-variant-numeric:tabular-nums;letter-spacing:.02em}.vi-player__rate i{font-style:normal;opacity:.6;margin-left:1px}.vi-player__menu{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:1px;min-width:76px;padding:4px;border-radius:9px;background:rgba(18,20,26,.96);box-shadow:0 12px 30px -10px rgba(0,0,0,.75),inset 0 0 0 1px rgba(255,255,255,.07)}.vi-player__menu[hidden]{display:none}.vi-player__menu button{border:0;background:none;color:rgba(255,255,255,.78);font:12px/1 inherit;padding:7px 10px;border-radius:6px;cursor:pointer;text-align:center;white-space:nowrap;transition:background .15s,color .15s}.vi-player__menu button:hover{background:rgba(255,255,255,.1);color:#fff}.vi-player__menu button.is-on{color:var(--vi-accent);background:rgba(255,255,255,.08)}.vi-video--nodl .vi-player__dl{display:none}.vi-player__err{position:absolute;top:0;left:0;right:0;bottom:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px 24px 64px;background:rgba(8,9,12,.9);color:#e8eaed;text-align:center;line-height:1.6}.vi-player__err[hidden]{display:none}.vi-player__err b{font-size:13px;font-weight:600}.vi-player__err span{font-size:12px;color:rgba(255,255,255,.62);max-width:88%}.vi-player__err a{font-size:12px;color:var(--vi-accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}.vi-player.is-error .vi-player__big{display:none}.vi-video__box:fullscreen{width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center}.vi-video__box:fullscreen video{max-height:100vh;max-width:100vw}@media(max-width:640px){.vi-player__bar{gap:6px;padding:20px 8px 8px}.vi-player__time{min-width:64px;font-size:11px}.vi-player__big{width:46px;height:46px;margin:-23px 0 0 -23px}.vi-player__rate{min-width:34px;font-size:10px}}@media(max-width:420px){.vi-player__dl{display:none}.vi-player__time{min-width:0;font-size:10px}.vi-player__time i,.vi-player__time span{display:none}.vi-player__bar{gap:4px;padding:18px 8px 6px}}</style><style>body{margin:0;padding:36px 22px 56px;background:#f5f6f8;color:#1f2328;font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}.wrap{max-width:1060px;margin:0 auto}h1{font-size:21px;font-weight:600;margin:0 0 6px}.lead{color:#8b929c;font-size:13px;margin:0 0 28px}h2{font-size:14px;font-weight:600;color:#5f6672;margin:32px 0 12px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}.item{background:#fff;border-radius:14px;padding:14px 14px 16px;box-shadow:0 1px 3px rgba(16,24,40,.05)}.item h3{font-size:13px;font-weight:600;margin:0 0 2px}.item code{font:10px/1 ui-monospace,monospace;color:#9aa0a6}.item .vi-video{margin:10px 0 0}.item .vi-video video{max-height:300px;width:auto;margin:0 auto}.item .vi-video__box{display:flex;justify-content:center}.item .vi-video__cap{font-size:11px}</style></head><body><div class="wrap"><h1>VideoInsert 播放器预览</h1><p class="lead">播放 / 进度 / 倍速 / 下载 / 音量 / 全屏，配色可切换；播放前会绘制首帧，不再黑屏。</p><h2>五种样式（中性配色）</h2><div class="grid"><style>.vi-video--card .vi-video__box{border-radius:14px;background:#0b0e13;box-shadow:0 1px 2px rgba(16,24,40,.06),0 10px 28px -14px rgba(16,24,40,.22);transition:box-shadow .25s ease}.vi-video--card .vi-video__box:hover{box-shadow:0 2px 4px rgba(16,24,40,.08),0 18px 40px -16px rgba(16,24,40,.30)}@media(prefers-color-scheme:dark){.vi-video--card .vi-video__box{box-shadow:0 0 0 1px rgba(255,255,255,.06),0 14px 34px -18px rgba(0,0,0,.85)}.vi-video--card .vi-video__cap{color:#9aa1ab}}</style><div class="item"><h3>卡片</h3><code>vi-video--card</code><div class="vi-video vi-video--card vi-video--color-neutral"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><style>.vi-video--minimal .vi-video__box{border-radius:3px;border:1px solid #e5e7eb;background:#000;transition:border-color .2s ease}.vi-video--minimal .vi-video__box:hover{border-color:#c7ccd2}.vi-video--minimal .vi-video__cap{text-align:left;padding-left:1px;color:#9aa0a6}@media(prefers-color-scheme:dark){.vi-video--minimal .vi-video__box{border-color:#2b2f35}.vi-video--minimal .vi-video__cap{color:#8b929c}}</style><div class="item"><h3>极简</h3><code>vi-video--minimal</code><div class="vi-video vi-video--minimal vi-video--color-neutral"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><style>.vi-video--cinema{margin:2em auto}.vi-video--cinema:not(.vi-video--embed) .vi-video__box{padding:10px;border-radius:18px;background:#08090c;box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),0 20px 44px -28px rgba(0,0,0,.6)}.vi-video--cinema:not(.vi-video--embed) video{border-radius:9px}.vi-video--cinema.vi-video--embed .vi-video__box{border-radius:18px}.vi-video--cinema .vi-video__cap{margin-top:.9em;font-size:.72em;letter-spacing:.18em;text-transform:uppercase;color:#7b828c}</style><div class="item"><h3>影院</h3><code>vi-video--cinema</code><div class="vi-video vi-video--cinema vi-video--color-neutral"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><style>.vi-video--paper:not(.vi-video--embed) .vi-video__box{padding:7px;border-radius:5px;background:#fff;border:1px solid #e4e7eb}.vi-video--paper:not(.vi-video--embed) video{border-radius:2px}.vi-video--paper.vi-video--embed .vi-video__box{border-radius:5px;border:1px solid #e4e7eb}.vi-video--paper .vi-video__cap{text-align:left;padding-left:10px;border-left:2px solid #dfe3e8;color:#7a8189}@media(prefers-color-scheme:dark){.vi-video--paper:not(.vi-video--embed) .vi-video__box{background:#15171a;border-color:#2a2e34}.vi-video--paper .vi-video__cap{border-left-color:#33383f;color:#8d949c}}</style><div class="item"><h3>相纸</h3><code>vi-video--paper</code><div class="vi-video vi-video--paper vi-video--color-neutral"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><style></style><div class="item"><h3>原生</h3><code>vi-video--native</code><div class="vi-video vi-video--native vi-video--color-neutral"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div></div><h2>六种配色（卡片样式）</h2><div class="grid"><div class="item"><h3>中性</h3><code>vi-video--color-neutral</code><div class="vi-video vi-video--card vi-video--color-neutral"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><div class="item"><h3>靛蓝</h3><code>vi-video--color-indigo</code><div class="vi-video vi-video--card vi-video--color-indigo"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><div class="item"><h3>青绿</h3><code>vi-video--color-teal</code><div class="vi-video vi-video--card vi-video--color-teal"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><div class="item"><h3>琥珀</h3><code>vi-video--color-amber</code><div class="vi-video vi-video--card vi-video--color-amber"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><div class="item"><h3>玫红</h3><code>vi-video--color-rose</code><div class="vi-video vi-video--card vi-video--color-rose"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div><div class="item"><h3>紫罗兰</h3><code>vi-video--color-violet</code><div class="vi-video vi-video--card vi-video--color-violet"><div class="vi-video__box"><video style="width:100%;" controls playsinline preload="none" poster="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22640%22%20viewBox%3D%220%200%20360%20640%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2320303a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a1116%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22360%22%20height%3D%22640%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22330%22%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22rgba%28255%2C255%2C255%2C.28%29%22%20text-anchor%3D%22middle%22%3Epreview%3C%2Ftext%3E%3C%2Fsvg%3E"></video></div><span class="vi-video__cap">同学跳绳 · 2026-11-07</span></div></div></div></div><script>/**
+ * VideoInsert 自绘播放器
+ * - 替换浏览器原生控制条（原生控件无法用 CSS 定制）
+ * - 失败时自动回退：只有在 UI 构建成功后才移除 controls 属性
+ * - 暴露 window.ViPlayer.init()，方便 PJAX / 动态插入内容后重新初始化
+ */
+(function () {
+    'use strict';
+
+    var ICONS = {
+        play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72c0 .8.87 1.3 1.56.9l10.8-6.86a1.05 1.05 0 0 0 0-1.8L9.56 4.24A1.05 1.05 0 0 0 8 5.14z"/></svg>',
+        pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg>',
+        volume: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.2h3.2L11.6 5a.8.8 0 0 1 1.3.63v12.74a.8.8 0 0 1-1.3.63l-4.9-4.2H3.5a.8.8 0 0 1-.8-.8v-4.4c0-.44.36-.8.8-.8z"/><path d="M16.2 8.4a5.1 5.1 0 0 1 0 7.2M18.7 5.6a8.8 8.8 0 0 1 0 12.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+        muted: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.2h3.2L11.6 5a.8.8 0 0 1 1.3.63v12.74a.8.8 0 0 1-1.3.63l-4.9-4.2H3.5a.8.8 0 0 1-.8-.8v-4.4c0-.44.36-.8.8-.8z"/><path d="M16.4 9.4l5 5.2M21.4 9.4l-5 5.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+        expand: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4.6c0-.33.27-.6.6-.6H9M15 4h4.4c.33 0 .6.27.6.6V9M20 15v4.4c0 .33-.27.6-.6.6H15M9 20H4.6a.6.6 0 0 1-.6-.6V15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+        shrink: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v4.4c0 .33-.27.6-.6.6H4M20 9h-4.4a.6.6 0 0 1-.6-.6V4M15 20v-4.4c0-.33.27-.6.6-.6H20M4 15h4.4c.33 0 .6.27.6.6V20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+        download: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7.6 10.6 12 15l4.4-4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 18.4h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>'
+    };
+
+    var RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
+    var lastRate = 1;
+
+    /**
+     * 触发下载：优先用 a[download]
+     * 跨域地址浏览器会忽略 download 属性，改为在新标签打开（取决于服务端 Content-Disposition）
+     */
+    function download(video) {
+        var src = video.currentSrc;
+        if (!src) {
+            var source = video.querySelector('source');
+            src = source ? source.src : '';
+        }
+        if (!src) {
+            return;
+        }
+
+        var name = 'video.mp4';
+        try {
+            var clean = src.split('?')[0].split('#')[0];
+            name = decodeURIComponent(clean.substring(clean.lastIndexOf('/') + 1)) || name;
+        } catch (e) {
+            // 保留默认文件名
+        }
+
+        var a = document.createElement('a');
+        a.href = src;
+        a.download = name;
+        a.rel = 'noopener';
+        a.target = '_blank';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+    function fmt(sec) {
+        if (!isFinite(sec) || sec < 0) {
+            sec = 0;
+        }
+        var m = Math.floor(sec / 60);
+        var s = Math.floor(sec % 60);
+        return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function el(tag, cls, html) {
+        var node = document.createElement(tag);
+        if (cls) {
+            node.className = cls;
+        }
+        if (html) {
+            node.innerHTML = html;
+        }
+        return node;
+    }
+
+    function build(video, box) {
+        var ui = el('div', 'vi-player is-visible is-paused');
+        ui.innerHTML = ''
+            + '<button type="button" class="vi-player__big" aria-label="播放">' + ICONS.play + '</button>'
+            + '<div class="vi-player__bar">'
+            + '  <button type="button" class="vi-player__btn vi-player__play" aria-label="播放">' + ICONS.play + '</button>'
+            + '  <span class="vi-player__time"><b>0:00</b><i>/</i><span>0:00</span></span>'
+            + '  <div class="vi-player__progress" role="slider" tabindex="0" aria-label="播放进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">'
+            + '    <i class="vi-player__buffer"></i>'
+            + '    <i class="vi-player__fill"></i>'
+            + '    <i class="vi-player__thumb"></i>'
+            + '  </div>'
+            + '  <div class="vi-player__wrap">'
+            + '    <button type="button" class="vi-player__btn vi-player__rate" aria-label="播放速度">1.0<i>×</i></button>'
+            + '    <div class="vi-player__menu" hidden></div>'
+            + '  </div>'
+            + '  <button type="button" class="vi-player__btn vi-player__dl" aria-label="下载视频">' + ICONS.download + '</button>'
+            + '  <button type="button" class="vi-player__btn vi-player__mute" aria-label="静音">' + ICONS.volume + '</button>'
+            + '  <div class="vi-player__vol" role="slider" tabindex="0" aria-label="音量" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">'
+            + '    <i class="vi-player__voltrack"></i><i class="vi-player__volfill"></i>'
+            + '  </div>'
+            + '  <button type="button" class="vi-player__btn vi-player__fs" aria-label="全屏">' + ICONS.expand + '</button>'
+            + '</div>'
+            + '<div class="vi-player__err" hidden>'
+            + '  <b>视频加载失败</b>'
+            + '  <span>可能是网络中断、视频服务器限制或链接已失效</span>'
+            + '  <a target="_blank" rel="noopener">打开原文件</a>'
+            + '</div>';
+
+        box.appendChild(ui);
+
+        var big = ui.querySelector('.vi-player__big');
+        var btnPlay = ui.querySelector('.vi-player__play');
+        var timeCur = ui.querySelector('.vi-player__time b');
+        var timeAll = ui.querySelector('.vi-player__time span');
+        var bar = ui.querySelector('.vi-player__progress');
+        var fill = ui.querySelector('.vi-player__fill');
+        var buffer = ui.querySelector('.vi-player__buffer');
+        var thumb = ui.querySelector('.vi-player__thumb');
+        var btnMute = ui.querySelector('.vi-player__mute');
+        var vol = ui.querySelector('.vi-player__vol');
+        var volFill = ui.querySelector('.vi-player__volfill');
+        var btnFs = ui.querySelector('.vi-player__fs');
+        var btnRate = ui.querySelector('.vi-player__rate');
+        var menu = ui.querySelector('.vi-player__menu');
+        var btnDl = ui.querySelector('.vi-player__dl');
+        var idleTimer = null;
+
+        for (var ri = 0; ri < RATES.length; ri++) {
+            var rateBtn = el('button', '', (RATES[ri] % 1 === 0 ? RATES[ri].toFixed(1) : String(RATES[ri])) + '×');
+            rateBtn.type = 'button';
+            rateBtn.setAttribute('data-rate', String(RATES[ri]));
+            menu.appendChild(rateBtn);
+        }
+
+        function ratio() {
+            return video.duration > 0 ? video.currentTime / video.duration : 0;
+        }
+
+        function paint() {
+            var r = Math.min(1, Math.max(0, ratio()));
+            var pct = (r * 100).toFixed(3) + '%';
+            fill.style.width = pct;
+            thumb.style.left = pct;
+            bar.setAttribute('aria-valuenow', Math.round(r * 100));
+            timeCur.textContent = fmt(video.currentTime);
+        }
+
+        function paintVolume() {
+            var v = video.muted ? 0 : video.volume;
+            volFill.style.width = (v * 100).toFixed(1) + '%';
+            vol.setAttribute('aria-valuenow', Math.round(v * 100));
+            btnMute.innerHTML = v === 0 ? ICONS.muted : ICONS.volume;
+            btnMute.setAttribute('aria-label', v === 0 ? '取消静音' : '静音');
+        }
+
+        function setPlaying(playing) {
+            ui.classList.toggle('is-paused', !playing);
+            btnPlay.innerHTML = playing ? ICONS.pause : ICONS.play;
+            big.innerHTML = ICONS.play;
+            btnPlay.setAttribute('aria-label', playing ? '暂停' : '播放');
+        }
+
+        function idle() {
+            clearTimeout(idleTimer);
+            if (video.paused || !menu.hidden) {
+                return;
+            }
+            idleTimer = setTimeout(function () {
+                ui.classList.remove('is-visible');
+            }, 2600);
+        }
+
+        function wake() {
+            ui.classList.add('is-visible');
+            idle();
+        }
+
+        function toggle() {
+            if (video.paused) {
+                var p = video.play();
+                if (p && typeof p.catch === 'function') {
+                    p.catch(function () {});
+                }
+            } else {
+                video.pause();
+            }
+        }
+
+        function seekTo(clientX) {
+            var rect = bar.getBoundingClientRect();
+            var r = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+            if (video.duration > 0) {
+                video.currentTime = r * video.duration;
+                paint();
+            }
+        }
+
+        big.addEventListener('click', toggle);
+        btnPlay.addEventListener('click', toggle);
+        video.addEventListener('click', toggle);
+
+        video.addEventListener('play', function () {
+            setPlaying(true);
+            wake();
+        });
+        video.addEventListener('pause', function () {
+            setPlaying(false);
+            wake();
+        });
+        video.addEventListener('ended', function () {
+            setPlaying(false);
+            wake();
+        });
+        video.addEventListener('timeupdate', paint);
+        video.addEventListener('durationchange', function () {
+            timeAll.textContent = fmt(video.duration);
+            paint();
+        });
+        video.addEventListener('progress', function () {
+            if (video.buffered.length && video.duration > 0) {
+                var end = video.buffered.end(video.buffered.length - 1);
+                buffer.style.width = ((end / video.duration) * 100).toFixed(2) + '%';
+            }
+        });
+        video.addEventListener('volumechange', paintVolume);
+
+        var dragging = false;
+        bar.addEventListener('pointerdown', function (e) {
+            dragging = true;
+            bar.classList.add('is-drag');
+            bar.setPointerCapture(e.pointerId);
+            seekTo(e.clientX);
+        });
+        bar.addEventListener('pointermove', function (e) {
+            if (dragging) {
+                seekTo(e.clientX);
+            }
+        });
+        bar.addEventListener('pointerup', function (e) {
+            dragging = false;
+            bar.classList.remove('is-drag');
+            try {
+                bar.releasePointerCapture(e.pointerId);
+            } catch (err) {}
+        });
+        bar.addEventListener('keydown', function (e) {
+            var step = e.shiftKey ? 10 : 5;
+            if (e.key === 'ArrowRight') {
+                video.currentTime = Math.min(video.duration || 0, video.currentTime + step);
+                e.preventDefault();
+            } else if (e.key === 'ArrowLeft') {
+                video.currentTime = Math.max(0, video.currentTime - step);
+                e.preventDefault();
+            }
+        });
+
+        btnMute.addEventListener('click', function () {
+            video.muted = !video.muted;
+            if (!video.muted && video.volume === 0) {
+                video.volume = 0.8;
+            }
+            paintVolume();
+        });
+
+        vol.addEventListener('pointerdown', function (e) {
+            var rect = vol.getBoundingClientRect();
+            var r = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+            video.volume = r;
+            video.muted = r === 0;
+            paintVolume();
+        });
+
+        btnFs.addEventListener('click', function () {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else if (box.requestFullscreen) {
+                box.requestFullscreen();
+            } else if (video.webkitEnterFullscreen) {
+                video.webkitEnterFullscreen();
+            }
+        });
+
+        document.addEventListener('fullscreenchange', function () {
+            var isFs = document.fullscreenElement === box;
+            btnFs.innerHTML = isFs ? ICONS.shrink : ICONS.expand;
+            ui.classList.add('is-visible');
+        });
+
+        function paintRate() {
+            var r = video.playbackRate || 1;
+            btnRate.innerHTML = (r % 1 === 0 ? r.toFixed(1) : String(r)) + '<i>×</i>';
+            var items = menu.children;
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.toggle('is-on', parseFloat(items[i].getAttribute('data-rate')) === r);
+            }
+        }
+
+        btnRate.addEventListener('click', function (e) {
+            e.stopPropagation();
+            menu.hidden = !menu.hidden;
+            wake();
+        });
+
+        menu.addEventListener('click', function (e) {
+            var target = e.target;
+            if (!target || target.nodeName !== 'BUTTON') {
+                return;
+            }
+            var rate = parseFloat(target.getAttribute('data-rate'));
+            video.playbackRate = rate;
+            lastRate = rate;
+            menu.hidden = true;
+            paintRate();
+        });
+
+        document.addEventListener('click', function () {
+            if (!menu.hidden) {
+                menu.hidden = true;
+            }
+        });
+
+        btnDl.addEventListener('click', function () {
+            download(video);
+        });
+
+        video.addEventListener('ratechange', paintRate);
+
+        var errBox = ui.querySelector('.vi-player__err');
+        var errLink = errBox.querySelector('a');
+
+        function showError() {
+            var link = video.currentSrc;
+            if (!link) {
+                var first = video.querySelector('source');
+                link = first ? first.src : '';
+            }
+            if (link) {
+                errLink.href = link;
+            }
+            errBox.hidden = false;
+            box.style.minHeight = '220px';
+            ui.classList.add('is-visible');
+            ui.classList.add('is-error');
+        }
+
+        // 视频源不可用（404 / 403 / 编码不支持）时不再是无声黑屏
+        video.addEventListener('error', showError);
+        var sources = video.querySelectorAll('source');
+        for (var si = 0; si < sources.length; si++) {
+            sources[si].addEventListener('error', showError);
+        }
+
+        if (lastRate && lastRate !== 1) {
+            video.playbackRate = lastRate;
+        }
+        paintRate();
+
+        box.addEventListener('pointermove', wake);
+        box.addEventListener('pointerleave', idle);
+
+        setPlaying(!video.paused);
+        paintVolume();
+        paint();
+        timeAll.textContent = fmt(video.duration);
+        if (!video.paused) {
+            idle();
+        }
+    }
+
+    function init() {
+        var videos = document.querySelectorAll('.vi-video video');
+        for (var i = 0; i < videos.length; i++) {
+            var video = videos[i];
+            if (video.dataset.viPlayer) {
+                continue;
+            }
+            var box = video.parentNode;
+            while (box && box.className && box.className.indexOf('vi-video__box') === -1) {
+                box = box.parentNode;
+            }
+            if (!box || box.className.indexOf('vi-video__box') === -1) {
+                continue;
+            }
+            try {
+                build(video, box);
+                video.dataset.viPlayer = '1';
+                video.removeAttribute('controls');
+            } catch (e) {
+                // 构建失败则保留原生控件
+            }
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+    window.ViPlayer = { init: init };
+})();
+</script></body></html>

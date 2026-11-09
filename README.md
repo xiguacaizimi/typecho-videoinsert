@@ -47,6 +47,13 @@ usr/plugins/VideoInsert/
 
 ## 三、安装
 
+**方式一：直接下载安装包**（推荐）
+
+下载 [`dist/VideoInsert-1.5.1.zip`](dist/VideoInsert-1.5.1.zip)，解压后把 `VideoInsert`
+整个目录放到 `usr/plugins/`。
+
+**方式二：从源码安装**
+
 1. 把 `VideoInsert` 整个目录上传到 `usr/plugins/`
 2. 后台 → 控制台 → 插件 → 找到「视频插入助手」→ 启用
 3. 需要调参数的话点「设置」
@@ -363,3 +370,9 @@ ffmpeg -i input.mp4 -vf "scale=720:-2" -c:v libx264 -profile:v main -level 4.0 \
   新增「裸链接自动播放」，独占一行的视频直链直接转播放器；
   地址粘贴时自动清理零宽字符与全角空格；校验失败时回显实际内容
 - 1.0.0 — 首版：编辑器按钮 + 短代码渲染 + 响应式 + 平台识别 + HTTPS 升级
+
+---
+
+## 十一、许可证
+
+[MIT](LICENSE) © 2026 xiguacaizimi
